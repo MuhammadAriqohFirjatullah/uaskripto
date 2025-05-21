@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XOR Stream Cipher</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>XOR Stream Cipher</h1>
+        
+        <div class="tabs">
+            <div class="tab-header">
+                <button class="tab-button active" data-tab="encrypt">Enkripsi</button>
+                <button class="tab-button" data-tab="decrypt">Dekripsi</button>
+            </div>
+            
+            <div class="tab-content active" id="encrypt">
+                <div class="card">
+                    <h2>Enkripsi Pesan</h2>
+                    <p class="description">Masukkan teks dan kunci untuk mengenkripsi pesan menggunakan XOR Stream Cipher.</p>
+                    
+                    <div class="form-group">
+                        <label for="plaintext">Plaintext</label>
+                        <textarea id="plaintext" placeholder="Masukkan pesan yang ingin dienkripsi"></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="encrypt-key">Kunci</label>
+                        <input type="text" id="encrypt-key" placeholder="Masukkan kunci enkripsi">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="ciphertext">Hasil Enkripsi (Hex)</label>
+                        <textarea id="ciphertext" placeholder="Hasil enkripsi akan muncul di sini" readonly></textarea>
+                    </div>
+                    
+                    <button id="encrypt-btn" class="btn">Enkripsi</button>
+                </div>
+            </div>
+            
+            <div class="tab-content" id="decrypt">
+                <div class="card">
+                    <h2>Dekripsi Pesan</h2>
+                    <p class="description">Masukkan teks terenkripsi (hex) dan kunci untuk mendekripsi pesan.</p>
+                    
+                    <div class="form-group">
+                        <label for="decrypt-input">Ciphertext (Hex)</label>
+                        <textarea id="decrypt-input" placeholder="Masukkan pesan terenkripsi (format hex)"></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="decrypt-key">Kunci</label>
+                        <input type="text" id="decrypt-key" placeholder="Masukkan kunci dekripsi">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="decrypt-result">Hasil Dekripsi</label>
+                        <textarea id="decrypt-result" placeholder="Hasil dekripsi akan muncul di sini" readonly></textarea>
+                    </div>
+                    
+                    <button id="decrypt-btn" class="btn">Dekripsi</button>
+                </div>
+            </div>
+        </div>
+        
+    
+    <script src="script.js"></script>
+</body>
+</html>
